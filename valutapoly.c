@@ -27,12 +27,12 @@ int valutapoly(char *f, char *x, int n_var){
 	// caso vettore base canonica:
 	//cerco l'xt=1 e quindi il risultato è solo xt*fj+termine noto mod2 
 
-	else if (a==1){			 
-		for (t=0; t<n_var; t++){      
-			if (x[t]==1){
-				return ((f[d-n_var-1+t]+f[d-1])%2);      //xt=1, lo ometto
-			}
+	else if (a==1){	
+		t = 0;		 
+		while (x[t]==0){
+			t++;
 		}
+		return ((f[d-n_var-1+t]+f[d-1])%2);     //xt=1, lo ometto
 	}
 	
 	// caso generico

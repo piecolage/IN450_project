@@ -53,6 +53,7 @@ int b(int k, int i){
 			}
 			l++;
 		}
+		return -2;
 	}
 	
 }
